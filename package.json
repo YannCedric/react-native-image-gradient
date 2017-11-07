@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-gradient",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "react native package for linear gradient component on image",
   "main": "index.js",
   "scripts": {
