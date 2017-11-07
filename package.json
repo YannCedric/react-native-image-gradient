@@ -1,0 +1,30 @@
+{
+  "name": "react-native-image-gradient",
+  "version": "1.0.0",
+  "description": "react native package for linear gradient component on image",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YannCedric/react-native-image-gradient.git"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "native",
+    "image",
+    "gradient",
+    "component"
+  ],
+  "author": "yannced",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YannCedric/react-native-image-gradient/issues"
+  },
+  "homepage": "https://github.com/YannCedric/react-native-image-gradient#readme",
+  "dependencies": {
+    "react-native-linear-gradient": "^2.3.0"
+  }
+}
