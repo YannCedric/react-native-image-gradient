@@ -1,10 +1,14 @@
 {
   "name": "react-native-image-gradient",
-  "version": "1.1.0",
-  "description": "react native package for linear gradient component on image",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "React native package for linear gradient component on image",
+  "main": "./distribution/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "jsx":"babel --plugins transform-react-jsx source --out-dir transpiled ",
+    "prod": "babel transpiled --presets babel-preset-es2015 --out-dir distribution",
+    "build": "npm run jsx && npm run prod",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,5 +30,10 @@
   "homepage": "https://github.com/YannCedric/react-native-image-gradient#readme",
   "dependencies": {
     "react-native-linear-gradient": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
   }
 }
