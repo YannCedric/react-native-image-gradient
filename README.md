@@ -2,8 +2,8 @@
 React native package to display a gradient filter over an image.
 
 ## To install 
-* run `npm install react-native-image-gradient -s`.
-* Run `react-native link` **OR** Follow instructions to configure react-native-linear-gradient [here](https://www.npmjs.com/package/react-native-linear-gradient).
+* Run `npm install react-native-image-gradient -s`.
+* Run `react-native link` (**or** follow instructions to *add react-native-linear-gradient to your project* [here](https://www.npmjs.com/package/react-native-linear-gradient)).
 
 ## Usage 
 ```javascript 
