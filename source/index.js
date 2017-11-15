@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient'
 
 import {
     View,
-    Image,
+    ImageBackground,
     StyleSheet,
 } from 'react-native'
 
@@ -29,11 +29,11 @@ export default class ImageGradient extends Component {
             opacityEnd = 0.9,
         } = this.props
         return (
-            <Image style={mainStyle} source={ localImage ? require(imageUrl) : { uri: imageUrl } }>
+            <ImageBackground style={mainStyle} source={ localImage ? require(imageUrl) : { uri: imageUrl } }>
                 <LinearGradient style={gradientStyle} start={startPosition} colors={[`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`]} >
                     {this.props.children}
                 </LinearGradient>
-            </Image>
+            </ImageBackground>
         )
     }
 }
