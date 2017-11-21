@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
-import { View, Image, StyleSheet } from 'react-native';
+import { View, ImageBackground, StyleSheet } from 'react-native';
 
 export default class ImageGradient extends Component {
 
@@ -18,17 +18,22 @@ export default class ImageGradient extends Component {
             imageUrl = 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png',
             localImage = false,
             startPosition = { x: 0.0, y: 0.50 },
+            endPosition = { x: 0.0, y: 1 },
             rgbcsvStart = '255,255,255',
             rgbcsvEnd = '0,0,0',
             opacityStart = 0.9,
             opacityEnd = 0.9
         } = this.props;
         return React.createElement(
-            Image,
+            ImageBackground,
             { style: mainStyle, source: localImage ? require(imageUrl) : { uri: imageUrl } },
             React.createElement(
                 LinearGradient,
-                { style: gradientStyle, start: startPosition, colors: [`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`] },
+                {
+                    style: gradientStyle,
+                    start: startPosition,
+                    end: endPosition,
+                    colors: [`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`] },
                 this.props.children
             )
         );

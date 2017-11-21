@@ -23,6 +23,7 @@ export default class ImageGradient extends Component {
             imageUrl = 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png' ,
             localImage = false,
             startPosition = { x: 0.0, y: 0.50 },
+            endPosition = { x: 0.0, y: 1 },
             rgbcsvStart = '255,255,255',
             rgbcsvEnd = '0,0,0',
             opacityStart = 0.9,
@@ -30,8 +31,13 @@ export default class ImageGradient extends Component {
         } = this.props
         return (
             <ImageBackground style={mainStyle} source={ localImage ? require(imageUrl) : { uri: imageUrl } }>
-                <LinearGradient style={gradientStyle} start={startPosition} colors={[`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`]} >
-                    {this.props.children}
+                <LinearGradient 
+                    style={gradientStyle} 
+                    start={startPosition} 
+                    end={endPosition}
+                    colors={[`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`]} >
+                        
+                        {this.props.children}
                 </LinearGradient>
             </ImageBackground>
         )
