@@ -39,7 +39,7 @@ render(){
 * **localImage** - flag to specify wether the path is local or not. Default: true.
 * **startPosition** - initial coordinates for the gradient effect.Range [0-1].  
 * **endPosition** - final coordinates for the gradient effect.Range [0-1]. 
->> **PS:** X is from left to righta and Y is from up to down. Check the image [below](#image).
+>> **PS:** X is from left to right and Y is from up to down. Check the image [below](#image).
 * **rgbcsvStart** - color (in csv format) for the beginning of the linear gradient. Default: black `('255,255,255')`.
 * **rgbcsvEnd** - color (in csv format) for the end of the linear gradient. Default: white `('0,0,0')`.
 * **opacityStart** - opacity for the primary color. Range [0-1].
