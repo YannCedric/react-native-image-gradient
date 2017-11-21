@@ -26,7 +26,7 @@ export default class ImageGradient extends Component {
             endPosition = { x: 0.0, y: 1 },
             rgbcsvStart = '255,255,255',
             rgbcsvEnd = '0,0,0',
-            opacityStart = 0.9,
+            opacityStart = 0.2,
             opacityEnd = 0.9,
         } = this.props
         return (
